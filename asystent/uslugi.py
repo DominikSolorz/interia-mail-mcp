@@ -84,6 +84,37 @@ class Asystent:
     def foldery_specjalne(self) -> dict:
         return self.mag._czytaj("foldery.json", {"wszystkie": [], "wyslane": None, "kosz": None, "spam": None})
 
+    def lista_folderow(self) -> dict:
+        """Pobiera pełną listę folderów Interii i liczbę wiadomości w każdym."""
+        with self.klient() as k:
+            fl = k.foldery()
+            spec = _specjalne(fl)
+            liczby = {}
+            for f in fl:
+                if "\\Noselect" in f["flagi"]:
+                    continue
+                try:
+                    liczby[f["nazwa"]] = k.wybierz(f["nazwa"])[0]
+                except BladImap:
+                    liczby[f["nazwa"]] = None
+            self.mag._zapisz("foldery.json", {"wszystkie": list(liczby), **spec})
+            return {"foldery": [{"nazwa": n, "liczba": liczby[n],
+                                 "systemowy": n in {spec.get("wyslane"), spec.get("kosz"), spec.get("spam")}}
+                                for n in liczby],
+                    "specjalne": spec}
+
+    def utworz_folder(self, nazwa: str) -> dict:
+        """Tworzy folder na serwerze Interii, jeśli nie istnieje."""
+        nazwa = " ".join((nazwa or "").strip().split())
+        if not nazwa or len(nazwa) > 80 or nazwa in {".", ".."}:
+            raise BladAsystenta("Nieprawidłowa nazwa folderu.")
+        with self.klient() as k:
+            k.utworz_folder(nazwa)
+            fl = k.foldery()
+        self.mag._zapisz("foldery.json", {"wszystkie": [f["nazwa"] for f in fl], **_specjalne(fl)})
+        self.mag.dziennik("utworzono_folder", folder=nazwa)
+        return {"utworzono": nazwa, "foldery": [f["nazwa"] for f in fl]}
+
     def _kontekst(self) -> dict:
         listy = self.mag.listy()
         return {
