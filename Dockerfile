@@ -4,7 +4,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY asystent ./asystent
-COPY konfiguracja.yaml reguly.yaml ./
+COPY reguly.yaml ./
 
 ENV PYTHONUNBUFFERED=1
 EXPOSE 8000
