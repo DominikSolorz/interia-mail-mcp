@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: interia-mail-mcp
+    runtime: docker
+    plan: starter
+    healthCheckPath: /
+    envVars:
+      - key: INTERIA_EMAIL
+        sync: false
+      - key: INTERIA_PASSWORD
+        sync: false
+      - key: MCP_BEARER_TOKEN
+        generateValue: true
