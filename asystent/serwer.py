@@ -130,6 +130,22 @@ def przygotuj_porzadki(folder: str = "INBOX", nadawcy: list[str] | None = None, 
 
 
 @narzedzie
+def przygotuj_plan_reklam(folder: str = "INBOX", starsze_niz_dni: int | None = None) -> str:
+    """Przygotowuje plan przeniesienia reklam i newsletterów do jednego folderu kwarantanny.
+    Niczego nie usuwa ani nie przenosi bez późniejszego potwierdzenia konkretnego plan_id.
+    Wiadomości urzędowe, prawne, finansowe i prywatne pozostają chronione."""
+    return _json(_a().przygotuj_porzadki(
+        folder=folder,
+        nadawcy=None,
+        domeny=None,
+        kategorie=["reklama", "newsletter"],
+        starsze_niz_dni=starsze_niz_dni,
+        akcja="kwarantanna",
+        wedlug_rekomendacji=False,
+    ))
+
+
+@narzedzie
 def pokaz_plan(plan_id: str, limit: int = 40) -> str:
     """Pokazuje szczeg��y planu (pozycje z powodami)."""
     return _json(_a().pokaz_plan(plan_id, limit))
