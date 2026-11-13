@@ -217,6 +217,12 @@ def oproznij_kosz_asystenta(message_ids: list[str] | None = None,
 
 
 @narzedzie
+def porownaj_wypisanie_usuniecie(nadawcy: list[str]) -> str:
+    """Porównuje wypisanie z usunięciem istniejących wiadomości dla wskazanych nadawców."""
+    return _json(_a().porownaj_wypisanie_usuniecie(nadawcy))
+
+
+@narzedzie
 def zaproponuj_wypisanie(nadawcy: list[str], zablokuj_po: bool = True) -> str:
     """Dodaje nadawc�w do KOLEJKI wypisania. Nic nie jest wysy�ane - u�ytkownik zatwierdza ka�d� pozycj�
     sam w zatwierdz.cmd. Metoda pochodzi wy��cznie z nag��wka List-Unsubscribe."""
