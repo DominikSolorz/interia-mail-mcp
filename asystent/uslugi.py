@@ -103,6 +103,31 @@ class Asystent:
                                 for n in liczby],
                     "specjalne": spec}
 
+    def utworz_strukture_folderow(self, separator: str = "/") -> dict:
+        """Tworzy bezpieczną, wielopoziomową strukturę folderów do późniejszej segregacji."""
+        separator = separator if separator in ("/", ".") else "/"
+        struktura = {
+            "Reklamy": ["Newslettery", "Pożyczki i kredyty", "Oferty i promocje"],
+            "Dokumenty": ["Faktury", "Umowy", "Załączniki"],
+            "Ważne": ["Urzędy", "Sądy i kancelarie", "Banki i płatności", "Praca"],
+            "Prywatne": ["Rodzina", "Znajomi"],
+            "Do weryfikacji": ["Niepewne", "Podejrzane"],
+        }
+        utworzone = []
+        with self.klient() as k:
+            obecne = {f["nazwa"] for f in k.foldery()}
+            for rodzic, dzieci in struktura.items():
+                for nazwa in [rodzic, *[rodzic + separator + d for d in dzieci]]:
+                    if nazwa not in obecne:
+                        k.utworz_folder(nazwa)
+                        utworzone.append(nazwa)
+                        obecne.add(nazwa)
+            fl = k.foldery()
+        self.mag._zapisz("foldery.json", {"wszystkie": [f["nazwa"] for f in fl], **_specjalne(fl)})
+        self.mag.dziennik("utworzono_strukture_folderow", utworzone=utworzone, separator=separator)
+        return {"utworzone": utworzone, "istniejace_lub_utworzone": [f["nazwa"] for f in fl],
+                "separator": separator}
+    
     def utworz_folder(self, nazwa: str) -> dict:
         """Tworzy folder na serwerze Interii, jeśli nie istnieje."""
         nazwa = " ".join((nazwa or "").strip().split())
