@@ -37,6 +37,16 @@ mcp = FastMCP(
 )
 
 
+try:
+    from starlette.responses import JSONResponse
+
+    @mcp.custom_route("/", methods=["GET", "HEAD"])
+    async def zdrowie(_request):
+        return JSONResponse({"status": "ok", "service": "interia-mail-mcp"})
+except AttributeError:
+    pass
+
+
 def _a() -> Asystent:
     return Asystent()
 
