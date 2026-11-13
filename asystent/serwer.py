@@ -76,6 +76,18 @@ def status_polaczenia() -> str:
 
 
 @narzedzie
+def lista_folderow() -> str:
+    """Pokazuje wszystkie foldery Interii wraz z liczbą wiadomości i oznaczeniem folderów systemowych."""
+    return _json(_a().lista_folderow())
+
+
+@narzedzie
+def utworz_folder(nazwa: str) -> str:
+    """Tworzy folder na serwerze Interii. Nie przenosi żadnych wiadomości."""
+    return _json(_a().utworz_folder(nazwa))
+
+
+@narzedzie
 def skanuj_skrzynke(foldery: list[str] | None = None) -> str:
     """Pobiera NAG��WKI wiadomo�ci (bez tre�ci) do lokalnej pami�ci i aktualizuje list�
     Twoich korespondent�w z folderu Wys�ane. Domy�lnie: INBOX i Spam. Kolejne skany s� przyrostowe.
