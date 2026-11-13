@@ -427,7 +427,7 @@ class Asystent:
         if not plan:
             raise BladAsystenta("Nie ma takiego planu.")
         if plan["status"] != "przygotowany":
-            raise BladAsystenta(f"Plan ma status "{plan['status']}" - nie mo�na go wykona� ponownie.")
+            raise BladAsystenta(f'Plan ma status "{plan["status"]}" - nie można go wykonać ponownie.')
         if datetime.fromisoformat(plan["wazny_do"]) < self.teraz():
             raise BladAsystenta("Plan wygas�. Przygotuj nowy (skrzynka mog�a si� zmieni�).")
         folder = plan["folder"]
@@ -684,7 +684,7 @@ class Asystent:
                      temat_zawiera=None, starsze_niz_dni=None, zatwierdzona=False,
                      dozwolone=AKCJE_PLANU) -> dict:
         if akcja not in dozwolone:
-        raise BladAsystenta(f'Niedozwolona akcja "{akcja}". Dozwolone: {", ".join(dozwolone)}.')
+            raise BladAsystenta(f'Niedozwolona akcja "{akcja}". Dozwolone: {", ".join(dozwolone)}.')
         if not any([nadawca, domena_, kategoria, temat_zawiera]):
             raise BladAsystenta("Regu�a musi mie� co najmniej jeden warunek (nadawca, domena, kategoria, temat).")
         reguly = [r for r in self.mag.reguly() if r.get("nazwa") != nazwa]
