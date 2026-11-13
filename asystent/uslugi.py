@@ -287,7 +287,7 @@ class Asystent:
         ochrona = Counter()
         for _, o, _, _ in oceny:
             for p in o.powody_ochrony:
-                ochrona[re.sub(r"\s*[("].*$", "", p)] += 1
+                ochrona[re.sub(r"\s*\(.*$", "", p)] += 1
         grupy = self._grupuj_nadawcow(oceny)
         kandydaci = [g for g in grupy if g["do_kwarantanny"] + g["do_archiwum"] > 0]
         nieaktywne = [g for g in grupy if g["nieaktywna_subskrypcja"]]
