@@ -55,8 +55,10 @@ class Stan:
         return Asystent(self.katalog, fabryka_klienta=fabryka)
 
     def foldery(self, a: Asystent) -> list[str]:
-        spam = a.foldery_specjalne().get("spam")
-        return [f for f in ["INBOX", spam] if f and f in a.mag.foldery_w_cache()]
+        """Zwraca wszystkie zeskanowane foldery poza Wysłanymi i systemowym Koszem."""
+        spec = a.foldery_specjalne()
+        wykluczone = {x for x in (spec.get("wyslane"), spec.get("kosz")) if x}
+        return [f for f in a.mag.foldery_w_cache() if f not in wykluczone]
 
     # --- skan w tle ---
     def uruchom_skan(self, po_skanie_auto: bool = False):
