@@ -1,0 +1,1646 @@
+Warning: truncated output (original token count: 16718)
+Total output lines: 2710
+
+# Regu�y automatycznego porz�dkowania.
+# Regu�y dodane przez Claude maj� 'zatwierdzona: false' - zatwierdzasz je
+# poleceniem 'zatwierdz.cmd' albo zmieniaj�c warto�� r�cznie na true.
+# Regu�y NIGDY nie dotycz� wiadomo�ci chronionych i tylko przenosz� (nie usuwaj�).
+reguly:
+- nazwa: 'Blokada: bio4free.com'
+  warunek:
+    domena: bio4free.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: sotako.pl'
+  warunek:
+    domena: sotako.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: swiatubezpieczen.com'
+  warunek:
+    domena: swiatubezpieczen.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: chingoracle.com'
+  warunek:
+    domena: chingoracle.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: najszybszy-wygrywa.pl'
+  warunek:
+    domena: najszybszy-wygrywa.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: sekrecik.pl'
+  warunek:
+    domena: sekrecik.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: rabatyszalone.pl'
+  warunek:
+    domena: rabatyszalone.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: horoscopofree.com'
+  warunek:
+    domena: horoscopofree.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: twojenowosci.pl'
+  warunek:
+    domena: twojenowosci.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: wygrywasz.pl'
+  warunek:
+    domena: wygrywasz.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: nk.pl'
+  warunek:
+    domena: nk.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mojaaurata.pl'
+  warunek:
+    domena: mojaaurata.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: finansowenewsy.pl'
+  warunek:
+    domena: finansowenewsy.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: widigo.pl'
+  warunek:
+    domena: widigo.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: bestzakup.pl'
+  warunek:
+    domena: bestzakup.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mail-kong.com'
+  warunek:
+    domena: mail-kong.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: aplikuj.info'
+  warunek:
+    domena: aplikuj.info
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: journauxetmagazines.com'
+  warunek:
+    domena: journauxetmagazines.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: nieruchomosci-online.pl'
+  warunek:
+    domena: nieruchomosci-online.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: yves-rocher.pl'
+  warunek:
+    domena: yves-rocher.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: ofertypremium.pl'
+  warunek:
+    domena: ofertypremium.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: autodoc.de'
+  warunek:
+    domena: autodoc.de
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: bonusyznetu.pl'
+  warunek:
+    domena: bonusyznetu.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: gazeticzasopism.com'
+  warunek:
+    domena: gazeticzasopism.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: payback.pl'
+  warunek:
+    domena: payback.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: ofertanadzis.com'
+  warunek:
+    domena: ofertanadzis.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: bluemedia.pl'
+  warunek:
+    domena: bluemedia.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: witamywklubie.pl'
+  warunek:
+    domena: witamywklubie.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: fabryka-ofert.com'
+  warunek:
+    domena: fabryka-ofert.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: bolt.eu'
+  warunek:
+    domena: bolt.eu
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: przewodnik-zakupow.com'
+  warunek:
+    domena: przewodnik-zakupow.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: znanaoferta.pl'
+  warunek:
+    domena: znanaoferta.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: intymnosc.net'
+  warunek:
+    domena: intymnosc.net
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: databases.network'
+  warunek:
+    domena: databases.network
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: news-nexus.pl'
+  warunek:
+    domena: news-nexus.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: bolt-rider.com'
+  warunek:
+    domena: bolt-rider.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: value-news.pl'
+  warunek:
+    domena: value-news.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: sprytneoferty.pl'
+  warunek:
+    domena: sprytneoferty.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: wspanialeoferty.pl'
+  warunek:
+    domena: wspanialeoferty.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: bajeczneokazje.pl'
+  warunek:
+    domena: bajeczneokazje.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: glovoapp.com'
+  warunek:
+    domena: glovoapp.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: pozyczki-serwis.pl'
+  warunek:
+    domena: pozyczki-serwis.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: ekskluzywnepomysly.com'
+  warunek:
+    domena: ekskluzywnepomysly.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: fincredyt.pl'
+  warunek:
+    domena: fincredyt.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: oceanicbono.com'
+  warunek:
+    domena: oceanicbono.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: rankomat.pl'
+  warunek:
+    domena: rankomat.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: ec-pl01.com'
+  warunek:
+    domena: ec-pl01.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: orangefinanse.com.pl'
+  warunek:
+    domena: orangefinanse.com.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: tsunami-news.pl'
+  warunek:
+    domena: tsunami-news.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: neuro-programmer.pl'
+  warunek:
+    domena: neuro-programmer.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: aurata.pl'
+  warunek:
+    domena: aurata.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: e-lady.pl'
+  warunek:
+    domena: e-lady.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: wishbox.pl'
+  warunek:
+    domena: wishbox.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: upjers.com'
+  warunek:
+    domena: upjers.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: randstad.pl'
+  warunek:
+    domena: randstad.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: gielda-czesci.pl'
+  warunek:
+    domena: gielda-czesci.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: getcredit.pl'
+  warunek:
+    domena: getcredit.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: moj-madry-zakupy-emailing.com'
+  warunek:
+    domena: moj-madry-zakupy-emailing.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: poland-media.com'
+  warunek:
+    domena: poland-media.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mailkong.pl'
+  warunek:
+    domena: mailkong.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: temu.com'
+  warunek:
+    domena: temu.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: zlapoferte.pl'
+  warunek:
+    domena: zlapoferte.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: gazetyiczasopismapost.com'
+  warunek:
+    domena: gazetyiczasopismapost.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: adzuna.pl'
+  warunek:
+    domena: adzuna.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: ofertasuper.pl'
+  warunek:
+    domena: ofertasuper.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: maniarabatow.pl'
+  warunek:
+    domena: maniarabatow.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: onlinemediagroup.pl'
+  warunek:
+    domena: onlinemediagroup.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: gazetyiczasopisma-news.com'
+  warunek:
+    domena: gazetyiczasopisma-news.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: smemailing.pl'
+  warunek:
+    domena: smemailing.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: designbyhumans.com'
+  warunek:
+    domena: designbyhumans.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mediamarkt.pl'
+  warunek:
+    domena: mediamarkt.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: amazon.com'
+  warunek:
+    domena: amazon.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: fresh-news.pl'
+  warunek:
+    domena: fresh-news.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: taxat.pl'
+  warunek:
+    domena: taxat.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: kroknet.com'
+  warunek:
+    domena: kroknet.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: interia.pl'
+  warunek:
+    domena: interia.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: gazetyiczasopismanews.com'
+  warunek:
+    domena: gazetyiczasopismanews.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: obnizamy-rachunki.pl'
+  warunek:
+    domena: obnizamy-rachunki.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: poradyszafiarki.pl'
+  warunek:
+    domena: poradyszafiarki.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mobileb2b.pl'
+  warunek:
+    domena: mobileb2b.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: empikfoto.pl'
+  warunek:
+    domena: empikfoto.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: news-msm-pl.com'
+  warunek:
+    domena: news-msm-pl.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: smileanddeal.pl'
+  warunek:
+    domena: smileanddeal.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: goodniooz.com'
+  warunek:
+    domena: goodniooz.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: allmedia-pl.com'
+  warunek:
+    domena: allmedia-pl.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: plejadaznizek.pl'
+  warunek:
+    domena: plejadaznizek.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: randstadservices.com'
+  warunek:
+    domena: randstadservices.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mr.bet'
+  warunek:
+    domena: mr.bet
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: tauron.pl'
+  warunek:
+    domena: tauron.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: gazetyiczasopismamag.com'
+  warunek:
+    domena: gazetyiczasopismamag.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: temuemail.com'
+  warunek:
+    domena: temuemail.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: novem.pl'
+  warunek:
+    domena: novem.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mailowehistorie.pl'
+  warunek:
+    domena: mailowehistorie.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: booksy.com'
+  warunek:
+    domena: booksy.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: luxmed.pl'
+  warunek:
+    domena: luxmed.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: cloudgazetyiczasopisma.com'
+  warunek:
+    domena: cloudgazetyiczasopisma.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: netflix.com'
+  warunek:
+    domena: netflix.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: master-zen.com'
+  warunek:
+    domena: master-zen.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: good-morning.pl'
+  warunek:
+    domena: good-morning.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: drogadookazji.pl'
+  warunek:
+    domena: drogadookazji.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: expressilustrowany.pl'
+  warunek:
+    domena: expressilustrowany.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: gls-group.eu'
+  warunek:
+    domena: gls-group.eu
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: instagram.com'
+  warunek:
+    domena: instagram.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: promodnia.pl'
+  warunek:
+    domena: promodnia.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: zappka.pl'
+  warunek:
+    domena: zappka.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: xmailix.com'
+  warunek:
+    domena: xmailix.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: ebroker.pl'
+  warunek:
+    domena: ebroker.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: news-pg.pl'
+  warunek:
+    domena: news-pg.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: dlh.net'
+  warunek:
+    domena: dlh.net
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: noreply.pl'
+  warunek:
+    domena: noreply.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: esky.pl'
+  warunek:
+    domena: esky.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: spin.city'
+  warunek:
+    domena: spin.city
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: obnizamyrachunki.pl'
+  warunek:
+    domena: obnizamyrachunki.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: petardapozyczka.pl'
+  warunek:
+    domena: petardapozyczka.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: multipozyczki.pl'
+  warunek:
+    domena: multipozyczki.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: lapaczeokazji.pl'
+  warunek:
+    domena: lapaczeokazji.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: pyszne.pl'
+  warunek:
+    domena: pyszne.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: wybrane4.pl'
+  warunek:
+    domena: wybrane4.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: specjalnenagrody.com'
+  warunek:
+    domena: specjalnenagrody.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: infopraca.pl'
+  warunek:
+    domena: infopraca.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: affiliate-24.com'
+  warunek:
+    domena: affiliate-24.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: tablica.pl'
+  warunek:
+    domena: tablica.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: salenews.pl'
+  warunek:
+    domena: salenews.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: promotion4ever.com'
+  warunek:
+    domena: promotion4ever.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: lapaczokazji.pl'
+  warunek:
+    domena: lapaczokazji.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: oferro.com'
+  warunek:
+    domena: oferro.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: ubezpieczenie24.pl'
+  warunek:
+    domena: ubezpieczenie24.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: shopownia.pl'
+  warunek:
+    domena: shopownia.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: happybestdeal.pl'
+  warunek:
+    domena: happybestdeal.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: shell.com'
+  warunek:
+    domena: shell.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: wizaz.pl'
+  warunek:
+    domena: wizaz.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: autodoc.eu'
+  warunek:
+    domena: autodoc.eu
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: alejka-kobiet.pl'
+  warunek:
+    domena: alejka-kobiet.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: fotka.pl'
+  warunek:
+    domena: fotka.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: gratka.pl'
+  warunek:
+    domena: gratka.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: salelifter.com'
+  warunek:
+    domena: salelifter.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: orange.pl'
+  warunek:
+    domena: orange.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: advicemedem.it'
+  warunek:
+    domena: advicemedem.it
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: motionnine.eu'
+  warunek:
+    domena: motionnine.eu
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: socjeta.pl'
+  warunek:
+    domena: socjeta.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: takingcare.pl'
+  warunek:
+    domena: takingcare.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: siepomaga.pl'
+  warunek:
+    domena: siepomaga.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: scityemailsclub.com'
+  warunek:
+    domena: scityemailsclub.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: programzakupowy.pl'
+  warunek:
+    domena: programzakupowy.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: zakupujznami.pl'
+  warunek:
+    domena: zakupujznami.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: otomoto.pl'
+  warunek:
+    domena: otomoto.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: takpozyczka.pl'
+  warunek:
+    domena: takpozyczka.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mediateam.pl'
+  warunek:
+    domena: mediateam.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mail-kong.pl'
+  warunek:
+    domena: mail-kong.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: zabka.pl'
+  warunek:
+    domena: zabka.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: promosdeldia.es'
+  warunek:
+    domena: promosdeldia.es
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: motionsix.eu'
+  warunek:
+    domena: motionsix.eu
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: player.pl'
+  warunek:
+    domena: player.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: super-rata.pl'
+  warunek:
+    domena: super-rata.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: ideabank.pl'
+  warunek:
+    domena: ideabank.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: lulek.tv'
+  warunek:
+    domena: lulek.tv
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: bonprix.pl'
+  warunek:
+    domena: bonprix.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: orange.com'
+  warunek:
+    domena: orange.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: vr3.pl'
+  warunek:
+    domena: vr3.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: 2cost1.com'
+  warunek:
+    domena: 2cost1.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: euro-tax.pl'
+  warunek:
+    domena: euro-tax.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: gram.pl'
+  warunek:
+    domena: gram.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: gazetyiczasopisma.com'
+  warunek:
+    domena: gazetyiczasopisma.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: trafiony-kupon.pl'
+  warunek:
+    domena: trafiony-kupon.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: ofertypremium.com'
+  warunek:
+    domena: ofertypremium.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: airbase.com.pl'
+  warunek:
+    domena: airbase.com.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: motor-x.pl'
+  warunek:
+    domena: motor-x.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: spin-city24.pl'
+  warunek:
+    domena: spin-city24.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: scemailsclub.com'
+  warunek:
+    domena: scemailsclub.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: astronel-email.com'
+  warunek:
+    domena: astronel-email.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: lidl.com'
+  warunek:
+    domena: lidl.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: chwilowkolot.pl'
+  warunek:
+    domena: chwilowkolot.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: wonga.pl'
+  warunek:
+    domena: wonga.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: se-c702.com.pl'
+  warunek:
+    domena: se-c702.com.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: kuki.pl'
+  warunek:
+    domena: kuki.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: credilo.pl'
+  warunek:
+…6718 tokens truncated…ue
+- nazwa: 'Blokada: no-reply@bik.pl'
+  warunek:
+    nadawca: no-reply@bik.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: no-reply@orange.com'
+  warunek:
+    nadawca: no-reply@orange.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: kontakt@mc.wonga.pl'
+  warunek:
+    nadawca: kontakt@mc.wonga.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@extraportfel.pl'
+  warunek:
+    nadawca: info@extraportfel.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: automat@bananki.pl'
+  warunek:
+    nadawca: automat@bananki.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: oferta@mailingin.pl'
+  warunek:
+    nadawca: oferta@mailingin.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: marcin@ankiety-tv.pl'
+  warunek:
+    nadawca: marcin@ankiety-tv.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: newsletter@motiontwo.eu'
+  warunek:
+    nadawca: newsletter@motiontwo.eu
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@newsletter.sygic.com'
+  warunek:
+    nadawca: info@newsletter.sygic.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: noreply@twoomail.com'
+  warunek:
+    nadawca: noreply@twoomail.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: kontakt@najlepszeporady.pl'
+  warunek:
+    nadawca: kontakt@najlepszeporady.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: noreplay@szalonydeal.com'
+  warunek:
+    nadawca: noreplay@szalonydeal.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: replayto117@gmail.com'
+  warunek:
+    nadawca: replayto117@gmail.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@twojenowosci.pl'
+  warunek:
+    nadawca: info@twojenowosci.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: atr.wsieci@szalowepromocje.pl'
+  warunek:
+    nadawca: atr.wsieci@szalowepromocje.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@rabatosfera.pl'
+  warunek:
+    nadawca: info@rabatosfera.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: sklep@perfumesco.pl'
+  warunek:
+    nadawca: sklep@perfumesco.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: atrakcjewsieci@kapitalnezakupy.pl'
+  warunek:
+    nadawca: atrakcjewsieci@kapitalnezakupy.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: news@quedepromociones.com'
+  warunek:
+    nadawca: news@quedepromociones.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: send@email.ma-mode-du-jour.fr'
+  warunek:
+    nadawca: send@email.ma-mode-du-jour.fr
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@newsmailthree.info'
+  warunek:
+    nadawca: info@newsmailthree.info
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: games@miniclipmail.com'
+  warunek:
+    nadawca: games@miniclipmail.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: kontakt@fajniemitu.com.pl'
+  warunek:
+    nadawca: kontakt@fajniemitu.com.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: piotr@porowneo.pl'
+  warunek:
+    nadawca: piotr@porowneo.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@ladycashback.pl'
+  warunek:
+    nadawca: info@ladycashback.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@zakupowy-szal.pl'
+  warunek:
+    nadawca: info@zakupowy-szal.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@planet49.pl'
+  warunek:
+    nadawca: info@planet49.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: ebroker.biuro@interia.pl'
+  warunek:
+    nadawca: ebroker.biuro@interia.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: usuarios@mejorespropuestas.com'
+  warunek:
+    nadawca: usuarios@mejorespropuestas.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: kontakt@czerwona-skarbonka.pl'
+  warunek:
+    nadawca: kontakt@czerwona-skarbonka.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mailing@drogiepieniadze.pl'
+  warunek:
+    nadawca: mailing@drogiepieniadze.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: gratis.pl@is.msdp1.com'
+  warunek:
+    nadawca: gratis.pl@is.msdp1.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@weekly.weekly-prizewinners.com'
+  warunek:
+    nadawca: info@weekly.weekly-prizewinners.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: biuro@skoda-auto.pl'
+  warunek:
+    nadawca: biuro@skoda-auto.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: aws@wybitneokazje.pl'
+  warunek:
+    nadawca: aws@wybitneokazje.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: wygrana@szczesliwa-loteria.pl'
+  warunek:
+    nadawca: wygrana@szczesliwa-loteria.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@mta3.hotemail.link'
+  warunek:
+    nadawca: info@mta3.hotemail.link
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: a.ws@conaprezenty.pl'
+  warunek:
+    nadawca: a.ws@conaprezenty.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@se.reactivemail.es'
+  warunek:
+    nadawca: info@se.reactivemail.es
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: awsieci@calkiemtanio.pl'
+  warunek:
+    nadawca: awsieci@calkiemtanio.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@mta29.navyl.com'
+  warunek:
+    nadawca: info@mta29.navyl.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@mta26.navyl.com'
+  warunek:
+    nadawca: info@mta26.navyl.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: aws@zawrotnepromocje.pl'
+  warunek:
+    nadawca: aws@zawrotnepromocje.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@najlepszedoradztwo.pl'
+  warunek:
+    nadawca: info@najlepszedoradztwo.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: atwsieci@dlaciebiepromocje.pl'
+  warunek:
+    nadawca: atwsieci@dlaciebiepromocje.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@mta43.mailsender.link'
+  warunek:
+    nadawca: info@mta43.mailsender.link
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: aws@conowegowofertach.pl'
+  warunek:
+    nadawca: aws@conowegowofertach.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: 4f@vr3.pl'
+  warunek:
+    nadawca: 4f@vr3.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mailing@perfumesco.pl'
+  warunek:
+    nadawca: mailing@perfumesco.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: oferty@mm-24.pl'
+  warunek:
+    nadawca: oferty@mm-24.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: atrakcje.wsieci@kapitalnezakupy.pl'
+  warunek:
+    nadawca: atrakcje.wsieci@kapitalnezakupy.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: noreply@ebroker.pl'
+  warunek:
+    nadawca: noreply@ebroker.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: wygrana@szczesliwa-loteria2.pl'
+  warunek:
+    nadawca: wygrana@szczesliwa-loteria2.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: wygrywasz@mailing.salelifter.com'
+  warunek:
+    nadawca: wygrywasz@mailing.salelifter.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: send@email.la-bonne-astuce.fr'
+  warunek:
+    nadawca: send@email.la-bonne-astuce.fr
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@hotemail.link'
+  warunek:
+    nadawca: info@hotemail.link
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: serwis@e-pity.pl'
+  warunek:
+    nadawca: serwis@e-pity.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: send@email.beaute-et-luxe.fr'
+  warunek:
+    nadawca: send@email.beaute-et-luxe.fr
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@newsmailsix.info'
+  warunek:
+    nadawca: info@newsmailsix.info
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: wysylka@mailing.kiamotors.pl'
+  warunek:
+    nadawca: wysylka@mailing.kiamotors.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: newsletter@hitbeh.eu'
+  warunek:
+    nadawca: newsletter@hitbeh.eu
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mail@4lead.pl'
+  warunek:
+    nadawca: mail@4lead.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: newsletter@hitbea.eu'
+  warunek:
+    nadawca: newsletter@hitbea.eu
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@news.portaledellastampaflex.com'
+  warunek:
+    nadawca: info@news.portaledellastampaflex.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: shop@yves-rocher.pl'
+  warunek:
+    nadawca: shop@yves-rocher.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: noreply@info.luxmed.pl'
+  warunek:
+    nadawca: noreply@info.luxmed.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: no-reply@m1.email.samsung.com'
+  warunek:
+    nadawca: no-reply@m1.email.samsung.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mediasoft.office@interia.pl'
+  warunek:
+    nadawca: mediasoft.office@interia.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@idz-na-zakupy.pl'
+  warunek:
+    nadawca: info@idz-na-zakupy.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: sekretariat@ankiety-konsumenckie.pl'
+  warunek:
+    nadawca: sekretariat@ankiety-konsumenckie.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: kontakt@nokaut.pl'
+  warunek:
+    nadawca: kontakt@nokaut.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: biuro@okazjomistrz.pl'
+  warunek:
+    nadawca: biuro@okazjomistrz.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: office@hoistfinance.pl'
+  warunek:
+    nadawca: office@hoistfinance.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: spotkanie@taxcare.pl'
+  warunek:
+    nadawca: spotkanie@taxcare.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@4lifedirect.pl'
+  warunek:
+    nadawca: info@4lifedirect.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: newsletter@ovmail018.eu'
+  warunek:
+    nadawca: newsletter@ovmail018.eu
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: newsletter@ovmail020.eu'
+  warunek:
+    nadawca: newsletter@ovmail020.eu
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: jagoda@gratis.pl'
+  warunek:
+    nadawca: jagoda@gratis.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: sklep@orange.pl'
+  warunek:
+    nadawca: sklep@orange.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: marketing@sibo.biz.pl'
+  warunek:
+    nadawca: marketing@sibo.biz.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@toprabat.pl'
+  warunek:
+    nadawca: info@toprabat.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: newsletter@mails.topselectionforyou.eu'
+  warunek:
+    nadawca: newsletter@mails.topselectionforyou.eu
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: no-reply@mail-kong.pl'
+  warunek:
+    nadawca: no-reply@mail-kong.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: newsletter@gearsix.eu'
+  warunek:
+    nadawca: newsletter@gearsix.eu
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: fantastyczny@ofertasuper.pl'
+  warunek:
+    nadawca: fantastyczny@ofertasuper.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: obsluga.klienta@avon.com'
+  warunek:
+    nadawca: obsluga.klienta@avon.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: informacja@witamywklubie.pl'
+  warunek:
+    nadawca: informacja@witamywklubie.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: aws@calkiemtanio.pl'
+  warunek:
+    nadawca: aws@calkiemtanio.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: atrajcjews@conaprezenty.pl'
+  warunek:
+    nadawca: atrajcjews@conaprezenty.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mailing@empischool.com.pl'
+  warunek:
+    nadawca: mailing@empischool.com.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mediasoftpolska@onet.pl'
+  warunek:
+    nadawca: mediasoftpolska@onet.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@mta11.hotemail.link'
+  warunek:
+    nadawca: info@mta11.hotemail.link
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@mta27.navyl.com'
+  warunek:
+    nadawca: info@mta27.navyl.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: informacja@zakupujznami.pl'
+  warunek:
+    nadawca: informacja@zakupujznami.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: twoje_nagrody@ankiety-tv.pl'
+  warunek:
+    nadawca: twoje_nagrody@ankiety-tv.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mariusz.office@gmail.com'
+  warunek:
+    nadawca: mariusz.office@gmail.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@wishbox.mdrctr.com'
+  warunek:
+    nadawca: info@wishbox.mdrctr.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: milena@vipresponse.es'
+  warunek:
+    nadawca: milena@vipresponse.es
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: ogrod@starkl.pl'
+  warunek:
+    nadawca: ogrod@starkl.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: newsletter@empikschool.com'
+  warunek:
+    nadawca: newsletter@empikschool.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: atrakcjewsieci@szalowepromocje.pl'
+  warunek:
+    nadawca: atrakcjewsieci@szalowepromocje.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: karmimypsiaki@karmimypsiaki.pl'
+  warunek:
+    nadawca: karmimypsiaki@karmimypsiaki.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@mta21.navyl.com'
+  warunek:
+    nadawca: info@mta21.navyl.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@mta1.hotemail.link'
+  warunek:
+    nadawca: info@mta1.hotemail.link
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: piotr@fajnefanty.com'
+  warunek:
+    nadawca: piotr@fajnefanty.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: send@e21.achatdujour.fr'
+  warunek:
+    nadawca: send@e21.achatdujour.fr
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: orangeoffers@wp.pl'
+  warunek:
+    nadawca: orangeoffers@wp.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: send@email.achatdujour.fr'
+  warunek:
+    nadawca: send@email.achatdujour.fr
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: agata@iforexmail.com'
+  warunek:
+    nadawca: agata@iforexmail.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: l0ttoland@vr3.pl'
+  warunek:
+    nadawca: l0ttoland@vr3.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: douglas@vr3.pl'
+  warunek:
+    nadawca: douglas@vr3.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: awizo@ankiety-tv.pl'
+  warunek:
+    nadawca: awizo@ankiety-tv.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: pg_polska@news-pg.pl'
+  warunek:
+    nadawca: pg_polska@news-pg.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@bomboweoferty.pl'
+  warunek:
+    nadawca: info@bomboweoferty.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: wazna_informacja@zwrot-wydatkow.pl'
+  warunek:
+    nadawca: wazna_informacja@zwrot-wydatkow.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: support@mydealcoup.com'
+  warunek:
+    nadawca: support@mydealcoup.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: newsletter@speak-up.pl'
+  warunek:
+    nadawca: newsletter@speak-up.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: kontakt@onehorizon.pl'
+  warunek:
+    nadawca: kontakt@onehorizon.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: joanna@werwa.net'
+  warunek:
+    nadawca: joanna@werwa.net
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mailing@polskapress.pl'
+  warunek:
+    nadawca: mailing@polskapress.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: kontakt@nazwa.pl'
+  warunek:
+    nadawca: kontakt@nazwa.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: send@email.astuce-boutique.fr'
+  warunek:
+    nadawca: send@email.astuce-boutique.fr
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: no-reply@fiat.pl'
+  warunek:
+    nadawca: no-reply@fiat.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: wazna_informacja@ankiety-polityczne.pl'
+  warunek:
+    nadawca: wazna_informacja@ankiety-polityczne.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@info.audi.pl'
+  warunek:
+    nadawca: info@info.audi.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: michael.trajkovic@kroknet.com'
+  warunek:
+    nadawca: michael.trajkovic@kroknet.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: powiadomienia@convoke-cy.com'
+  warunek:
+    nadawca: powiadomienia@convoke-cy.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@newsmailseven.info'
+  warunek:
+    nadawca: info@newsmailseven.info
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: noreply@news.rainofsales.com'
+  warunek:
+    nadawca: noreply@news.rainofsales.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: newsletter@trafficone.eu'
+  warunek:
+    nadawca: newsletter@trafficone.eu
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: reply@tomsta.info'
+  warunek:
+    nadawca: reply@tomsta.info
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: reply@myseru.info'
+  warunek:
+    nadawca: reply@myseru.info
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: contact@goodssoldonline.com'
+  warunek:
+    nadawca: contact@goodssoldonline.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: donotreply@darwin.com'
+  warunek:
+    nadawca: donotreply@darwin.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: agata@onehorizon.pl'
+  warunek:
+    nadawca: agata@onehorizon.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: newsletter@credita.pl'
+  warunek:
+    nadawca: newsletter@credita.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: empikfoto@express.fra1.medallia.eu'
+  warunek:
+    nadawca: empikfoto@express.fra1.medallia.eu
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: no-reply@opinia.t-mobile.pl'
+  warunek:
+    nadawca: no-reply@opinia.t-mobile.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: alicja@crezu.pl'
+  warunek:
+    nadawca: alicja@crezu.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: noreply@sotako.pl'
+  warunek:
+    nadawca: noreply@sotako.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mariusz.b@ebroker.pl'
+  warunek:
+    nadawca: mariusz.b@ebroker.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: newsletter@ebroker.pl'
+  warunek:
+    nadawca: newsletter@ebroker.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: noreply@wygrywasz.pl'
+  warunek:
+    nadawca: noreply@wygrywasz.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: info@bestzakup.pl'
+  warunek:
+    nadawca: info@bestzakup.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: noreply@ofertypremium.pl'
+  warunek:
+    nadawca: noreply@ofertypremium.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: noreply@maniarabatow.pl'
+  warunek:
+    nadawca: noreply@maniarabatow.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: office.mediasoft@gmail.com'
+  warunek:
+    nadawca: office.mediasoft@gmail.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: kobieta-trendy@mailing.salelifter.com'
+  warunek:
+    nadawca: kobieta-trendy@mailing.salelifter.com
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mailing@mobileb2b.pl'
+  warunek:
+    nadawca: mailing@mobileb2b.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mailing@smemailing.pl'
+  warunek:
+    nadawca: mailing@smemailing.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: no-reply@bounces.infopraca.pl'
+  warunek:
+    nadawca: no-reply@bounces.infopraca.pl
+  akcja: kosz
+  zatwierdzona: true
+- nazwa: 'Blokada: mailing@nk.pl'
+  warunek:
+    nadawca: mailing@nk.pl
+  akcja: kosz
+  zatwierdzona: true
