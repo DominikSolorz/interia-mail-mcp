@@ -74,7 +74,10 @@ def wczytaj(katalog: Path | None = None) -> dict:
     dane = {}
     if plik.exists():
         dane = yaml.safe_load(plik.read_text(encoding="utf-8")) or {}
-    return _scal(DOMYSLNA, dane)
+    cfg = _scal(DOMYSLNA, dane)
+    if os.environ.get("INTERIA_EMAIL"):
+        cfg["konto"]["email"] = os.environ["INTERIA_EMAIL"]
+    return cfg
 
 
 def zapisz(cfg: dict, katalog: Path | None = None) -> Path:
