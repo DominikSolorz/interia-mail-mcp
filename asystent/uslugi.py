@@ -301,8 +301,7 @@ class Asystent:
         L.append(f"**Do kwarantanny:** {akcje.get(KWARANTANNA, 0)}  **do archiwum:** {akcje.get(ARCHIWUM, 0)}  "
                  f"**zostaj�:** {akcje.get(ZOSTAW, 0)}  **chronione (nietykalne):** {akcje.get(ZACHOWAJ, 0)}")
         L.append("")
-        L.append("Nic nie zosta�o jeszcze zmienione. Kwarantanna = przeniesienie do folderu "
-                 f""{self.cfg['foldery']['kwarantanna']}", z mo�liwo�ci� cofni�cia.")
+        L.append(f'Nic nie zostało jeszcze zmienione. Kwarantanna = przeniesienie do folderu "{self.cfg["foldery"]["kwarantanna"]}", z możliwością cofnięcia.')
         L.append("")
         L.append("## Kategorie")
         L.append("| Kategoria | Liczba |\n|---|---:|")
