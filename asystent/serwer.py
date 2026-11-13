@@ -295,6 +295,19 @@ def dziennik_dzialan(ile: int = 30) -> str:
     return _json(_a().dziennik(ile))
 
 
+@narzedzie
+def wykonaj_wypisanie(pozycja_id: str) -> str:
+    """Wykonuje jedną pozycję kolejki wypisania po wyraźnym potwierdzeniu użytkownika.
+    Nie usuwa wcześniejszych wiadomości. Po sukcesie może zablokować nowe wiadomości od nadawcy."""
+    pozycje = _a().kolejka()
+    pozycja = next((p for p in pozycje if p.get("id") == pozycja_id), None)
+    if not pozycja:
+        return _json({"ok": False, "komunikat": "Nie znaleziono oczekującej pozycji wypisania."})
+    ok, info = _a().wykonaj_wypisanie(pozycja)
+    return _json({"ok": ok, "pozycja_id": pozycja_id, "adres": pozycja.get("adres"), "informacja": info,
+                  "uwaga": "Wypisanie nie usuwa wcześniejszych wiadomości."})
+
+
 def main():
     mcp.run()
 
