@@ -1,2 +1,12 @@
+[project]
+name = "interia-mail-mcp"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+  "mcp>=1.20,<2",
+  "keyring>=25",
+  "pyyaml>=6",
+]
+
 [tool.vercel]
 entrypoint = "api.mcp:app"
