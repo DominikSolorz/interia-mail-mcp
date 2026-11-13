@@ -207,9 +207,12 @@ def oproznij_kosz_asystenta(message_ids: list[str] | None = None,
     Wymaga dok�adnego potwierdzenia ``USU� TRWALE``. Bez niego narz�dzie
     tylko zwraca b��d i nie wykonuje �adnej operacji.
     """
-    if potwierdzenie.strip().upper() != "USU� TRWALE":
-        return _json({"usuniete": 0, "wymagane": "USU� TRWALE",
-                      "komunikat": "Brak potwierdzenia. Niczego nie usuni�to."})
+    if not message_ids:
+        return _json({"usuniete": 0,
+                      "komunikat": "Brak wskazanych identyfikatorów. Najpierw użyj lista_kosza_asystenta i wybierz konkretne wiadomości."})
+    if potwierdzenie.strip().upper() != "USUŃ TRWALE":
+        return _json({"usuniete": 0, "wymagane": "USUŃ TRWALE",
+                      "komunikat": "Brak potwierdzenia. Niczego nie usunięto."})
     return _json(_a().oproznij_kosz(message_ids))
 
 
