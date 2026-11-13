@@ -103,7 +103,7 @@ class Asystent:
     def _oceny(self, folder: str):
         cache = self.mag.cache(folder)
         if not cache["wiadomosci"]:
-            raise BladAsystenta(f"Folder "{folder}" nie by� jeszcze skanowany. U�yj narz�dzia skanuj_skrzynke.")
+            raise BladAsystenta(f'Folder "{folder}" nie by� jeszcze skanowany. U�yj narz�dzia skanuj_skrzynke.')
         ctx = self._kontekst()
         ctx["masowi"] = self._masowi(cache)
         spam = folder == self.foldery_specjalne().get("spam")
