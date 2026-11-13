@@ -82,7 +82,7 @@ SLOWA_CHRONIONE = [
     r"nota (obciazeniowa|ksiegowa|korygujaca)", r"korekt\w* faktur\w*", r"pismo", r"egzekuc\w*",
     r"mandat\w*", r"wypowiedzeni\w*", r"reklamacj\w*", r"gwarancj\w*",
     r"przypomnieni\w* o (platnosc\w*|zaplac\w*|terminie)", r"do zaplaty", r"naleznosc\w*", r"zaplat\w* za",
-    r"fs ?\d+", r"fv ?\d+", r"nota odsetkow\w*", r"saldo", r"splat\w*", r"kredyt\w*", r"pozyczk\w*",
+    r"fs ?\d+", r"fv ?\d+", r"nota odsetkow\w*", r"saldo", r"splat\w*",
 ]
 
 SLOWA_PROMOCYJNE = [
