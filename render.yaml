@@ -2,7 +2,7 @@ services:
   - type: web
     name: interia-mail-mcp
     runtime: docker
-    plan: starter
+    plan: free
     healthCheckPath: /
     envVars:
       - key: INTERIA_EMAIL
