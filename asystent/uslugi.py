@@ -140,7 +140,13 @@ class Asystent:
             spec = _specjalne(fl)
             self.mag._zapisz("foldery.json", {"wszystkie": [f["nazwa"] for f in fl], **spec})
             if not foldery:
-                foldery = ["INBOX"] + ([spec["spam"]] if spec["spam"] else [])
+                # Skanuj wszystkie zwykłe foldery Interii. Wysłane służą tylko
+                # do wykrywania korespondentów, a systemowy Kosz pomijamy.
+                wykluczone = {x for x in (spec.get("wyslane"), spec.get("kosz")) if x}
+                foldery = [
+                    f["nazwa"] for f in fl
+                    if "\\Noselect" not in f["flagi"] and f["nazwa"] not in wykluczone
+                ]
             for folder in foldery:
                 c = self.mag.cache(folder)
                 uv, uidy = k.uidy(folder)
