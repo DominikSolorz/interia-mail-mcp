@@ -372,7 +372,7 @@ class Asystent:
         """tylko_pewne - tylko wiadomo�ci z wysok� pewno�ci� (min. 2 niezale�ne sygna�y wysy�ki masowej).
         zatrzymane - funkcja(rec) -> pow�d lub None: dodatkowe weto (np. ocena AI)."""
         if akcja not in dozwolone:
-        raise BladAsystenta(f'Niedozwolona akcja "{akcja}". Dozwolone: {", ".join(dozwolone)}.')
+            raise BladAsystenta(f'Niedozwolona akcja "{akcja}". Dozwolone: {", ".join(dozwolone)}.')
         cache, oceny = self._oceny(folder)
         nadawcy = [a.lower() for a in (nadawcy or [])]
         domeny = [d.lower().lstrip("@") for d in (domeny or [])]
