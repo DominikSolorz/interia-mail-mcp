@@ -252,7 +252,7 @@ def ocen(rec: dict, *, folder: str = "INBOX", korespondenci=frozenset(), chronie
             kat = NEWSLETTER
     elif not prywatna_domena and (m := RE_PROMO.search(temat)):
         kat = REKLAMA
-        powody.insert(0, f"s�owo promocyjne w temacie ("{m.group(0)}")")
+        powody.insert(0, f'slowo promocyjne w temacie ("{m.group(0)}")')")
     elif RE_TRANS.search(temat):
         kat = TRANSAKCYJNE
         powody.insert(0, "temat transakcyjny")
