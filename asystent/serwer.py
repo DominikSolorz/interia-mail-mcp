@@ -140,6 +140,26 @@ def stan_kwarantanny() -> str:
 
 
 @narzedzie
+def lista_kosza_asystenta() -> str:
+    """Pokazuje wiadomo�ci oczekuj�ce w Koszu asystenta przed trwa�ym usuni�ciem."""
+    return _json(_a().kosz_asystenta())
+
+
+@narzedzie
+def oproznij_kosz_asystenta(message_ids: list[str] | None = None,
+                            potwierdzenie: str = "") -> str:
+    """TRWALE usuwa wiadomo�ci z Kosza asystenta.
+
+    Wymaga dok�adnego potwierdzenia ``USU� TRWALE``. Bez niego narz�dzie
+    tylko zwraca b��d i nie wykonuje �adnej operacji.
+    """
+    if potwierdzenie.strip().upper() != "USU� TRWALE":
+        return _json({"usuniete": 0, "wymagane": "USU� TRWALE",
+                      "komunikat": "Brak potwierdzenia. Niczego nie usuni�to."})
+    return _json(_a().oproznij_kosz(message_ids))
+
+
+@narzedzie
 def zaproponuj_wypisanie(nadawcy: list[str], zablokuj_po: bool = True) -> str:
     """Dodaje nadawc�w do KOLEJKI wypisania. Nic nie jest wysy�ane - u�ytkownik zatwierdza ka�d� pozycj�
     sam w zatwierdz.cmd. Metoda pochodzi wy��cznie z nag��wka List-Unsubscribe."""
