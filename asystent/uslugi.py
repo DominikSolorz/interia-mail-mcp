@@ -743,7 +743,7 @@ class Asystent:
                 for r in reguly:
                     if self._pasuje(rec, o, r.get("warunek", {}), self.teraz()):
                         akcja = r["akcja"]
-                        powod = f"regu�a "{r['nazwa']}"" + ("" if r.get("zatwierdzona") else " (niezatwierdzona)")
+                        powod = f'reguła "{r["nazwa"]}"' + ("" if r.get("zatwierdzona") else " (niezatwierdzona)")
                         break
             if not akcja and screener and o.masowa and pierwsze.get(rec["od"], "") >= granica_nowych \
                     and rec["od"] not in kor:
