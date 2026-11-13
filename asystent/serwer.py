@@ -88,6 +88,12 @@ def utworz_folder(nazwa: str) -> str:
 
 
 @narzedzie
+def utworz_strukture_folderow(separator: str = "/") -> str:
+    """Tworzy strukturę folderów i podfolderów do segregacji. Nie przenosi wiadomości."""
+    return _json(_a().utworz_strukture_folderow(separator))
+
+
+@narzedzie
 def skanuj_skrzynke(foldery: list[str] | None = None) -> str:
     """Pobiera NAG��WKI wiadomo�ci (bez tre�ci) do lokalnej pami�ci i aktualizuje list�
     Twoich korespondent�w z folderu Wys�ane. Domy�lnie: INBOX i Spam. Kolejne skany s� przyrostowe.
