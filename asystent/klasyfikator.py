@@ -244,7 +244,7 @@ def ocen(rec: dict, *, folder: str = "INBOX", korespondenci=frozenset(), chronie
     elif masowa:
         if m := RE_PROMO.search(temat):
             kat = REKLAMA
-            powody.insert(0, f'promocja w temacie ("{m.group(0)}")')
+        powody.insert(0, f'promocja w temacie ("{m.group(0)}")')
         elif RE_TRANS.search(temat):
             kat = TRANSAKCYJNE
             powody.insert(0, "temat transakcyjny")
