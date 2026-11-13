@@ -696,6 +696,37 @@ class Asystent:
         return self.mag.listy()
 
     # ------------------------------------------------------------------ wypisywanie (kolejka)
+    def porownaj_wypisanie_usuniecie(self, nadawcy: list[str]) -> dict:
+        """Rozdziela wycofanie subskrypcji od porządkowania już odebranych wiadomości."""
+        recs = []
+        for folder in self.mag.foldery_w_cache():
+            recs.extend(self.mag.cache(folder)["wiadomosci"].values())
+        wynik = []
+        for adres in nadawcy:
+            adres = adres.strip().lower()
+            jego = [r for r in recs if r.get("od") == adres]
+            najnowszy = max(jego, key=lambda r: r.get("data", ""), default=None)
+            metoda = None
+            if najnowszy and najnowszy.get("n", {}).get("list-unsubscribe"):
+                metoda = wypisywanie.metody(
+                    najnowszy["n"]["list-unsubscribe"],
+                    najnowszy["n"].get("list-unsubscribe-post", ""),
+                )
+            wynik.append({
+                "adres": adres,
+                "liczba_istniejacych_wiadomosci": len(jego),
+                "wypisanie": {
+                    "dostepne": bool(metoda),
+                    "metoda": metoda["rodzaj"] if metoda else "brak",
+                    "uwaga": "Wypisanie dotyczy przyszłych wiadomości i nie usuwa starych."
+                },
+                "porzadkowanie": {
+                    "dostepne": bool(jego),
+                    "uwaga": "Można przygotować osobny plan przeniesienia istniejących wiadomości do kwarantanny lub wybranego folderu."
+                }
+            })
+        return {"nadawcy": wynik}
+
     def zaproponuj_wypisanie(self, nadawcy: list[str], zablokuj_po=True) -> dict:
         kolejka = self.mag.kolejka()
         dodane, bez_metody = [], []
