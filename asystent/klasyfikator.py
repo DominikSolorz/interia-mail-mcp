@@ -187,10 +187,10 @@ def ocen(rec: dict, *, folder: str = "INBOX", korespondenci=frozenset(), chronie
     if d := _pasuje_domena(dom, list(DOMENY_FINANSOWE) + list(dodatkowe_domeny)):
         powody_ochrony.append(f"instytucja finansowa lub chroniona domena ({d})")
     if m := RE_CHRONIONE.search(temat):
-        powody_ochrony.append(f"temat zawiera "{m.group(0)}"")
+        powody_ochrony.append(f'temat zawiera "{m.group(0)}"')
     for slowo in dodatkowe_slowa:
         if normalizuj(slowo) and normalizuj(slowo) in temat:
-            powody_ochrony.append(f"temat zawiera "{slowo}"")
+            powody_ochrony.append(f'temat zawiera "{slowo}"')
     if rec.get("zalaczniki"):
         powody_ochrony.append("za��cznik-dokument (" + ", ".join(sorted(set(rec["zalaczniki"]))[:4]) + ")")
     if od and od in korespondenci:
@@ -244,7 +244,7 @@ def ocen(rec: dict, *, folder: str = "INBOX", korespondenci=frozenset(), chronie
     elif masowa:
         if m := RE_PROMO.search(temat):
             kat = REKLAMA
-            powody.insert(0, f"s�owo promocyjne w temacie ("{m.group(0)}")")
+            powody.insert(0, f's�owo promocyjne w temacie ("{m.group(0)}")')
         elif RE_TRANS.search(temat):
             kat = TRANSAKCYJNE
             powody.insert(0, "temat transakcyjny")
