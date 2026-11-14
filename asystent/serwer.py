@@ -102,6 +102,13 @@ def skanuj_skrzynke(foldery: list[str] | None = None) -> str:
 
 
 @narzedzie
+def skanuj_newslettery() -> str:
+    """Szybko wyszukuje tylko wiadomości z nagłówkiem List-Unsubscribe we wszystkich zwykłych folderach.
+    Niczego nie usuwa, nie przenosi i nie wysyła."""
+    return _json(_a().skanuj_newslettery())
+
+
+@narzedzie
 def raport_porzadkowania(folder: str = "INBOX", top: int = 25) -> str:
     """Raport: ile wiadomo�ci mo�na przenie�� do kwarantanny/archiwum, od jakich nadawc�w i dlaczego,
     nieaktywne subskrypcje, firmy wysy�aj�ce reklamy oraz powody ochrony. Zapisuje te� plik .md w raporty/."""
