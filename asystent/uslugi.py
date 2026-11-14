@@ -807,7 +807,7 @@ class Asystent:
         def wykonaj(q):
             return q, self.wykonaj_wypisanie(q)
         wyniki = []
-        with ThreadPoolExecutor(max_workers=6) as pool:
+        with ThreadPoolExecutor(max_workers=1) as pool:
             futures = [pool.submit(wykonaj, q) for q in aktywne]
             for i, fut in enumerate(as_completed(futures), 1):
                 q, (ok, info) = fut.result()
