@@ -250,6 +250,33 @@ class Asystent:
         self.mag.dziennik("skan", wyniki=wyniki)
         return wyniki
 
+    def skanuj_newslettery(self, postep=None) -> dict:
+        """Szybki skan wyłącznie wiadomości z nagłówkiem List-Unsubscribe."""
+        wyniki = {}
+        postep = postep or (lambda **kw: None)
+        with self.klient() as k:
+            fl = k.foldery()
+            spec = _specjalne(fl)
+            wykluczone = {x for x in (spec.get("wyslane"), spec.get("kosz")) if x}
+            for folder in [f["nazwa"] for f in fl if "\\Noselect" not in f["flagi"] and f["nazwa"] not in wykluczone]:
+                try:
+                    uv, uidy = k.uidy_z_naglowkiem(folder)
+                except BladImap:
+                    continue
+                postep(folder=folder, zrobione=0, razem=len(uidy))
+                rekordy = list(k.naglowki(folder, uidy, partia=200))
+                cache = self.mag.cache(folder)
+                if cache.get("uidvalidity") != uv:
+                    cache = {"folder": folder, "uidvalidity": uv, "skan": None, "wiadomosci": {}, "wersja": WERSJA_CACHE}
+                for rec in rekordy:
+                    cache["wiadomosci"][str(rec["uid"])] = rec
+                cache["skan"] = teraz_iso()
+                self.mag.zapisz_cache(folder, cache)
+                wyniki[folder] = {"newslettery": len(rekordy), "uidy": uidy}
+                postep(folder=folder, zrobione=len(rekordy), razem=len(uidy))
+        self.mag.dziennik("skan_newsletterow", wyniki=wyniki)
+        return wyniki
+
     # ------------------------------------------------------------------ analiza
     def _grupuj_nadawcow(self, oceny) -> list[dict]:
         grupy = defaultdict(list)
