@@ -237,6 +237,13 @@ def zaproponuj_wypisanie(nadawcy: list[str], zablokuj_po: bool = True) -> str:
 
 
 @narzedzie
+def przygotuj_wypisanie_wszystkich(zablokuj_po: bool = True) -> str:
+    """Przygotowuje kolejkę wszystkich unikalnych nadawców z List-Unsubscribe.
+    Niczego nie wysyła i nie usuwa. Każdą pozycję trzeba sprawdzić i zatwierdzić osobno."""
+    return _json(_a().zaproponuj_wypisanie_wszystkich(zablokuj_po))
+
+
+@narzedzie
 def kolejka_zatwierdzen() -> str:
     """Pozycje czekaj�ce na zatwierdzenie u�ytkownika (wypisania)."""
     return _json(_a().kolejka())
