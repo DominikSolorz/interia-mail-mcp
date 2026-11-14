@@ -6,6 +6,7 @@ import email
 import html
 import re
 from collections import Counter, defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from email import policy
 from pathlib import Path
@@ -797,23 +798,29 @@ class Asystent:
         return [q for q in self.mag.kolejka() if q["status"] == "oczekuje"]
 
     def wykonaj_wszystkie_wypisania(self, potwierdzenie: str = "") -> dict:
-        """Wykonuje kolejkę one-click i mailto po jawnym potwierdzeniu w rozmowie."""
+        """Wykonuje kolejkę szybko, partiami i z możliwością wznowienia."""
         if potwierdzenie.strip().upper() != "WYPISZ WSZYSTKICH":
-            return {"ok": False, "wymagane": "WYPISZ WSZYSTKICH", "wykonano": 0, "komunikat": "Brak potwierdzenia. Niczego nie wysłano."}
+            return {"ok": False, "wymagane": "WYPISZ WSZYSTKICH", "wykonano": 0,
+                    "komunikat": "Brak potwierdzenia. Niczego nie wysłano."}
         kolejka = self.mag.kolejka()
-        wyniki, wykonano = [], 0
-        for q in kolejka:
-            if q.get("metoda", {}).get("rodzaj") not in ("one-click", "mailto"):
-                continue
-            ok, info = self.wykonaj_wypisanie(q)
-            q["status"] = "wykonane" if ok else "nieudane"
-            q["wynik"] = info
-            wyniki.append({"adres": q.get("adres"), "ok": ok, "informacja": info})
-            wykonano += int(ok)
+        aktywne = [q for q in kolejka if q.get("metoda", {}).get("rodzaj") in ("one-click", "mailto")]
+        def wykonaj(q):
+            return q, self.wykonaj_wypisanie(q)
+        wyniki = []
+        with ThreadPoolExecutor(max_workers=6) as pool:
+            futures = [pool.submit(wykonaj, q) for q in aktywne]
+            for i, fut in enumerate(as_completed(futures), 1):
+                q, (ok, info) = fut.result()
+                q["status"] = "wykonane" if ok else "nieudane"
+                q["wynik"] = info
+                wyniki.append({"adres": q.get("adres"), "ok": ok, "informacja": info})
+                if i % 25 == 0:
+                    self.mag.zapisz_kolejke(kolejka)
         self.mag.zapisz_kolejke(kolejka)
-        return {"ok": True, "wykonano": wykonano, "przetworzono": len(wyniki), "wyniki": wyniki,
+        return {"ok": True, "wykonano": sum(1 for x in wyniki if x["ok"]),
+                "przetworzono": len(wyniki), "wyniki": wyniki,
                 "pominieto_reczne_linki": sum(1 for q in kolejka if q.get("status") == "oczekuje"),
-                "uwaga": "Nie usunięto żadnych wcześniejszych wiadomości."}
+                "uwaga": "Postęp zapisano partiami. Nie usunięto wcześniejszych wiadomości."}
 
     def wykonaj_wypisanie(self, pozycja: dict, haslo: str | None = None) -> tuple[bool, str]:
         """Wywo�ywane wy��cznie z CLI lub panelu po potwierdzeniu przez cz�owieka."""
