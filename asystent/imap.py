@@ -159,7 +159,7 @@ def parsuj_list(linia) -> dict | None:
 class Klient:
     """Po��czenie IMAP z Interi�. U�ywaj jako mened�era kontekstu."""
 
-    def __init__(self, host: str, port: int, uzytkownik: str, haslo: str, timeout: int = 60):
+    def __init__(self, host: str, port: int, uzytkownik: str, haslo: str, timeout: int = 180):
         self.host, self.port, self.uzytkownik, self._haslo, self.timeout = host, port, uzytkownik, haslo, timeout
         self.conn: imaplib.IMAP4_SSL | None = None
         self.mozliwosci: set[str] = set()
@@ -243,7 +243,7 @@ class Klient:
                 wynik[int(m_uid.group(1))] = m_f.group(1).split() if m_f else []
         return wynik
 
-    def naglowki(self, folder: str, uidy: list[int], partia: int = 250, tylko_adresaci: bool = False):
+    def naglowki(self, folder: str, uidy: list[int], partia: int = 500, tylko_adresaci: bool = False):
         self.wybierz(folder)
         pola = "TO CC" if tylko_adresaci else POLA_NAGLOWKOW
         for i in range(0, len(uidy), partia):
