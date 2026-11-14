@@ -219,6 +219,21 @@ class Klient:
         uidvalidity = int(uv[0]) if uv and uv[0] else 0
         return liczba, uidvalidity
 
+    def _wznow_polaczenie(self) -> None:
+        """Wznawia połączenie po rozłączeniu serwera podczas długiego skanu."""
+        try:
+            if self.conn is not None:
+                self.conn.logout()
+        except Exception:
+            pass
+        ctx = ssl.create_default_context()
+        self.conn = imaplib.IMAP4_SSL(self.host, self.port, ssl_context=ctx, timeout=self.timeout)
+        self.conn.login(self.uzytkownik, self._haslo)
+        typ, dane = self.conn.capability()
+        self.mozliwosci = set(dane[0].decode().upper().split()) if dane and dane[0] else set()
+        if self._wybrany:
+            self.wybierz(self._wybrany[0], tylko_odczyt=self._wybrany[1])
+
     # --- odczyt ---
     def uidy(self, folder: str) -> tuple[int, list[int]]:
         liczba, uv = self.wybierz(folder)
@@ -251,9 +266,13 @@ class Klient:
             elementy = "(UID FLAGS INTERNALDATE RFC822.SIZE BODYSTRUCTURE BODY.PEEK[HEADER.FIELDS (%s)])" % pola
             if tylko_adresaci:
                 elementy = "(UID BODY.PEEK[HEADER.FIELDS (%s)])" % pola
-            typ, dane = self.conn.uid("FETCH", zestaw, elementy)
+            try:
+                typ, dane = self.conn.uid("FETCH", zestaw, elementy)
+            except (imaplib.IMAP4.abort, imaplib.IMAP4.error, OSError):
+                self._wznow_polaczenie()
+                typ, dane = self.conn.uid("FETCH", zestaw, elementy)
             if typ != "OK":
-                raise BladImap(f"Pobieranie nag��wk�w nie powiod�o si�: {dane}")
+                raise BladImap(f"Pobieranie nagłówków nie powiodło się: {dane}")
             yield from parsuj_fetch(dane)
 
     def cala_wiadomosc(self, folder: str, uid: int, maks_bajtow: int = 3_000_000) -> bytes | None:
