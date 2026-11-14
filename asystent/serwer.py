@@ -310,6 +310,13 @@ def dziennik_dzialan(ile: int = 30) -> str:
 
 
 @narzedzie
+def wykonaj_wszystkie_wypisania(potwierdzenie: str = "") -> str:
+    """Wykonuje kolejkę one-click i mailto po dokładnym potwierdzeniu WYPISZ WSZYSTKICH.
+    Nie otwiera ręcznych linków i nie usuwa wcześniejszych wiadomości."""
+    return _json(_a().wykonaj_wszystkie_wypisania(potwierdzenie))
+
+
+@narzedzie
 def wykonaj_wypisanie(pozycja_id: str) -> str:
     """Wykonuje jedną pozycję kolejki wypisania po wyraźnym potwierdzeniu użytkownika.
     Nie usuwa wcześniejszych wiadomości. Po sukcesie może zablokować nowe wiadomości od nadawcy."""
