@@ -796,6 +796,25 @@ class Asystent:
     def kolejka(self) -> list[dict]:
         return [q for q in self.mag.kolejka() if q["status"] == "oczekuje"]
 
+    def wykonaj_wszystkie_wypisania(self, potwierdzenie: str = "") -> dict:
+        """Wykonuje kolejkę one-click i mailto po jawnym potwierdzeniu w rozmowie."""
+        if potwierdzenie.strip().upper() != "WYPISZ WSZYSTKICH":
+            return {"ok": False, "wymagane": "WYPISZ WSZYSTKICH", "wykonano": 0, "komunikat": "Brak potwierdzenia. Niczego nie wysłano."}
+        kolejka = self.mag.kolejka()
+        wyniki, wykonano = [], 0
+        for q in kolejka:
+            if q.get("metoda", {}).get("rodzaj") not in ("one-click", "mailto"):
+                continue
+            ok, info = self.wykonaj_wypisanie(q)
+            q["status"] = "wykonane" if ok else "nieudane"
+            q["wynik"] = info
+            wyniki.append({"adres": q.get("adres"), "ok": ok, "informacja": info})
+            wykonano += int(ok)
+        self.mag.zapisz_kolejke(kolejka)
+        return {"ok": True, "wykonano": wykonano, "przetworzono": len(wyniki), "wyniki": wyniki,
+                "pominieto_reczne_linki": sum(1 for q in kolejka if q.get("status") == "oczekuje"),
+                "uwaga": "Nie usunięto żadnych wcześniejszych wiadomości."}
+
     def wykonaj_wypisanie(self, pozycja: dict, haslo: str | None = None) -> tuple[bool, str]:
         """Wywo�ywane wy��cznie z CLI lub panelu po potwierdzeniu przez cz�owieka."""
         m = pozycja["metoda"]
