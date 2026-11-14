@@ -244,6 +244,14 @@ class Klient:
             raise BladImap("UID SEARCH nie powi�d� si�")
         return uv, [int(x) for x in (dane[0] or b"").split()]
 
+    def uidy_z_naglowkiem(self, folder: str, naglowek: str = "List-Unsubscribe") -> tuple[int, list[int]]:
+        """Wyszukuje UID-y po stronie serwera IMAP bez pobierania całego folderu."""
+        uv, _ = self.uidy(folder)
+        typ, dane = self.conn.uid("SEARCH", None, "HEADER", naglowek, '""')
+        if typ != "OK":
+            raise BladImap(f"Wyszukiwanie nagłówka {naglowek} nie powiodło się: {dane}")
+        return uv, [int(x) for x in (dane[0] or b"").split()]
+
     def flagi(self, folder: str) -> dict[int, list[str]]:
         liczba, _ = self.wybierz(folder)
         if liczba == 0:
