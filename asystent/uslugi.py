@@ -780,6 +780,19 @@ class Asystent:
         return {"dodane_do_kolejki": dodane, "bez_naglowka_wypisania": bez_metody,
                 "uwaga": "Nic nie zosta�o wys�ane. Wypisanie wykonasz po zatwierdzeniu w pliku zatwierdz.cmd."}
 
+    def zaproponuj_wypisanie_wszystkich(self, zablokuj_po: bool = True) -> dict:
+        """Buduje kolejkę wypisań dla wszystkich unikalnych nadawców z List-Unsubscribe.
+        Nie wysyła żądań; każda pozycja wymaga późniejszego zatwierdzenia."""
+        recs = []
+        for folder in self.mag.foldery_w_cache():
+            recs.extend(self.mag.cache(folder)["wiadomosci"].values())
+        adresy = sorted({r.get("od", "").lower() for r in recs
+                         if r.get("od") and r.get("n", {}).get("list-unsubscribe")})
+        wynik = self.zaproponuj_wypisanie(adresy, zablokuj_po=zablokuj_po)
+        wynik["liczba_kandydatow"] = len(adresy)
+        wynik["uwaga"] = "Przygotowano kolejkę. Niczego jeszcze nie wysłano; zatwierdź pozycje po sprawdzeniu nadawców."
+        return wynik
+
     def kolejka(self) -> list[dict]:
         return [q for q in self.mag.kolejka() if q["status"] == "oczekuje"]
 
